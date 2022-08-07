@@ -1,0 +1,56 @@
+
+.general-btn {
+    padding: 20px;
+    border-radius: 6px;
+    border: 0;
+    background-color: rgb(205, 110, 110);
+    border: 2px solid rgb(205, 110, 110);
+    color: white;
+    font-weight: bold;
+    transition: all 0.20s;
+    cursor: pointer;
+}
+
+.general-btn:hover {
+    background-color: rgb(226, 147, 147);
+    border: 2px solid rgb(226, 147, 147);
+}
+
+.general-btn:active {
+    transform: scale(0.958);
+}
+
+.return-btn {
+    padding: 20px;
+    border: 2px solid rgb(205, 110, 110);
+    border-radius: 6px;
+    background-color: white;
+    color: rgb(205, 110, 110);
+    font-weight: bold;
+    transition: all 0.20s;
+    cursor: pointer;
+}
+
+.return-btn:active {
+    transform: scale(0.958);
+}
+
+.return-btn:hover {
+    background-color: rgb(255, 243, 243);
+
+}
+
+.close-btn {
+    height: 40px;
+    width: 40px;
+    
+    padding: 5px;
+    border: 2px solid rgb(205, 110, 110);
+    border-radius: 100%;
+    background-color: white;
+    color: rgb(205, 110, 110);
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: all 0.20s;
+    cursor: pointer;
+}

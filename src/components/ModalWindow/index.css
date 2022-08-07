@@ -1,0 +1,33 @@
+.ModalWindow__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10%;
+    background-color: rgba(0, 0, 0, 0.218);
+    
+    
+}
+
+.ModalWindow__window {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px 40px;
+    border-radius: 8px;
+    transform: scale(0.0);
+    transition: all 0.5s;
+    
+}
+
+.ModalWindow__window.active {
+    
+    transform: scale(1.0);
+}
+
