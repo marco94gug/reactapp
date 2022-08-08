@@ -24,7 +24,7 @@
     padding: 20px;
     border: 2px solid rgb(78, 89, 122);
     border-radius: 6px;
-    background-color: white;
+    background: none;
     color: rgb(78, 89, 122);
     font-weight: bold;
     transition: all 0.20s;

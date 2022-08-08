@@ -7,8 +7,8 @@ import { MdOutlineWorkOutline } from "react-icons/md";
 import Navbar from './components/Navbar';
 import HamMenu from './components/HamMenu';
 import Hero from './components/Hero';
-import Button from './components/Button';
-import ModalWindow from './components/ModalWindow';
+// import Button from './components/Button';
+// import ModalWindow from './components/ModalWindow';
 import SlideModal from './components/SlideModal';
 import Logo from './assets/logoW.png';
 
@@ -22,8 +22,8 @@ const menuList = [
     icon: <AiOutlineProject className='experiences'/>
   },
   {
-    text: 'Work',
-    icon: <MdOutlineWorkOutline className='work'/>
+    text: 'My Projects',
+    icon: <MdOutlineWorkOutline className='my_projects'/>
   },
   {
     text: 'Contact',
@@ -32,51 +32,64 @@ const menuList = [
 ]
 
 function App() {
-  const [value, setValue] = useState(false)
+  // const [value, setValue] = useState(false)
   const [slideVisible, setSlideVisible] = useState(false)
+  const [sectionValue, setSectionValue] = useState('About');
+  const [isActive, setActive] = useState(false);
 
-  const handleOnClickAccept = () => {
-    setValue(true);
-    console.log(value)
+
+  // const handleOnClickAccept = () => {
+  //   setValue(true);
+  //   console.log(value)
+  // }
+  // const handleOnClickCancel = () => {
+  //   setValue(false);
+  //   console.log(value);
+  // }
+  // const handleOnClickSlide = () => {
+  // setSlideVisible(true);
+  // }
+//   const handleModalClose = (e) => {
+// if (e.target.classList.contains('ModalWindow__overlay'))
+//   setValue(false);
+//   }
+  const handleOnClickList = (item) => {
+    setSectionValue(item)
+    console.log(sectionValue);
+    if (item === 'Contact') {
+      setSlideVisible(true)
+      setActive(!isActive)
     }
-  const handleOnClickCancel = () => {
-    setValue(false);
-    console.log(value);
+    if (item === 'About') {
+      setSlideVisible(false)
+      setActive(!isActive)
+    }
+    if (item === 'Experiences') {
+      setSlideVisible(false)
+      setActive(!isActive)
+    }
+    if (item === 'My Projects') {
+      setSlideVisible(false)
+      setActive(!isActive)
+    }
   }
- const handleOnClickSlide = () => {
-  setSlideVisible(true);
- }
- const handleModalClose = (e) => {
-if (e.target.classList.contains('ModalWindow__overlay'))
-  setValue(false);
- }
- const handleOnClickLink = () => {
-    window.open('https://edgemony.com/')
- }
 
   return (
     <div className="App">
       <Navbar>
         <img className="Logo" src={Logo} alt="logo"/>
       </Navbar>
-      <HamMenu>
+      <HamMenu setActive={setActive} isActive={isActive}>
         <ul className='menu-list'>
-          { menuList.map((item, index) => <li key={item.text + index}>{item.icon}{item.text}</li> )}
+          { menuList.map((item, index) => <li onClick={() => handleOnClickList(item.text)} key={item.text + index}>{item.icon}{item.text}</li> )}
         </ul>
       </HamMenu>
       <main className="main_section">
-        <Hero>
-          <p className='presentation-text'>Hi, my name is</p>
-          <h1 className='title'>Marco Guglielmino.</h1>
-          <h2 className='subtitle'>I build things for the web.</h2>
-          <p className='description-text'>Front-end Developer Computer enthusiast since childhood. 
-            I have various experience in the tech field, such as photo editing and sound design. 
-            Currently I am improving my javascript, specifically the reactJS framework at <span onClick={handleOnClickLink} className='edgemony'>Edgemony</span>, 
-            to grow my knowledge and enhance my creativity.</p>
-            <div className="btn-knowledge">
-            <Button btnText="Check out my knowledge" className="return-btn" />
-            </div>
-        </Hero>
+        <Hero/>
+        <SlideModal slideVisible={slideVisible} setSlideVisible={setSlideVisible}>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, numquam. Quos atque dolor natus consectetur!</p>
+      </SlideModal> 
+          
         {/* <div className="button-container">
           <Button btnText="Open SlideModal" className="return-btn" onClick={handleOnClickSlide} />
           <Button btnText="Open ModalWindow" className="general-btn" onClick={handleOnClickAccept} />

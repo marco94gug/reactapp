@@ -1,9 +1,8 @@
 import './index.css'
 import {useState} from 'react';
 
-const HamMenu = ({children}) => {
-    const [isActive, setActive] = useState(false);
-
+const HamMenu = ({children, setActive, isActive}) => {
+    
     const handleOnClick = () => {
         setActive(!isActive);
     }
