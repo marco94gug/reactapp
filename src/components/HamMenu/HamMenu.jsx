@@ -1,7 +1,7 @@
 import './index.css'
 import {useState} from 'react';
 
-const HamMenu = () => {
+const HamMenu = ({children}) => {
     const [isActive, setActive] = useState(false);
 
     const handleOnClick = () => {
@@ -9,11 +9,18 @@ const HamMenu = () => {
     }
 
     return (
-        <div onClick={handleOnClick} className={!isActive ? 'toggle' : 'toggle active'}>
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
+        <>
+            <div onClick={handleOnClick} className={!isActive ? 'toggle' : 'toggle active'}>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+                <div className={!isActive ? 'HamMenu' : 'HamMenu active'}>
+                    {children}
+                </div> 
+            
+        </>
     )
 }
 

@@ -1,6 +1,20 @@
 .App {
     height: 100vh;
     width: 100vw;
+    color: rgb(50, 50, 50);
+}
+
+.menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-end;
+}
+
+li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .main_section {

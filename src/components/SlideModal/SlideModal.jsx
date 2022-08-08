@@ -1,12 +1,7 @@
 import './index.css'
-import { useEffect } from 'react';
 import Button from '../Button'
+
 const SlideModal = ({children, slideVisible, setSlideVisible}) => {
-
-    // useEffect(() => {
-    //     setSlideVisible(true);
-
-    // }, []);
 
     const handleOnClickClose = () => {
         setSlideVisible(false);

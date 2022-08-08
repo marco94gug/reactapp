@@ -5,7 +5,7 @@ import HamMenu from './components/HamMenu';
 import Button from './components/Button'
 import ModalWindow from './components/ModalWindow';
 import SlideModal from './components/SlideModal';
-import Logo from './assets/logo.png'
+import Logo from './assets/logoW.png'
 
 function App() {
   const [value, setValue] = useState(false)
@@ -32,10 +32,18 @@ if (e.target.classList.contains('ModalWindow__overlay'))
   return (
     <div className="App">
       <Navbar>
-        <img className="Logo" src={Logo} />
-        <p>Lorem ipsum dolor sit amet.</p>  
-        <HamMenu />
+        <img className="Logo" src={Logo} alt="logo"/>
+        
+        
       </Navbar>
+      <HamMenu>
+        <ul className='menu-list'>
+          <li>About</li>
+          <li>Experience</li>
+          <li>Work</li>
+          <li>Contact</li>
+        </ul>
+      </HamMenu>
       <main className="main_section">
         <h1>{value ? 'true' : 'false'}</h1>
         <div className="button-container">
