@@ -1,11 +1,16 @@
 import {useState} from 'react'
 import './App.css';
+import { BiUser } from "react-icons/bi";
+import { AiOutlineProject, AiOutlineMail } from "react-icons/ai";
+import { MdOutlineWorkOutline } from "react-icons/md";
+
+
 import Navbar from './components/Navbar';
 import HamMenu from './components/HamMenu';
 import Button from './components/Button'
 import ModalWindow from './components/ModalWindow';
 import SlideModal from './components/SlideModal';
-import Logo from './assets/logoW.png'
+import Logo from './assets/logoW.png';
 
 function App() {
   const [value, setValue] = useState(false)
@@ -38,15 +43,15 @@ if (e.target.classList.contains('ModalWindow__overlay'))
       </Navbar>
       <HamMenu>
         <ul className='menu-list'>
-          <li>About</li>
-          <li>Experience</li>
-          <li>Work</li>
-          <li>Contact</li>
+          <li><BiUser className='aboutme' />About</li>
+          <li><AiOutlineProject />Experience</li>
+          <li><MdOutlineWorkOutline />Work</li>
+          <li><AiOutlineMail />Contact</li>
         </ul>
       </HamMenu>
       <main className="main_section">
-        <h1>{value ? 'true' : 'false'}</h1>
-        <div className="button-container">
+        
+        {/* <div className="button-container">
           <Button btnText="Open SlideModal" className="return-btn" onClick={handleOnClickSlide} />
           <Button btnText="Open ModalWindow" className="general-btn" onClick={handleOnClickAccept} />
         </div>
@@ -61,7 +66,7 @@ if (e.target.classList.contains('ModalWindow__overlay'))
             <Button btnText="Close" className="return-btn" onClick={handleOnClickCancel}/>
             <Button btnText="Accept" className="general-btn" onClick={handleOnClickAccept} />
           </div>
-        </ModalWindow> }
+        </ModalWindow> } */}
         </main>
     </div>
   );

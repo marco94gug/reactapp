@@ -3,8 +3,8 @@
     padding: 20px;
     border-radius: 6px;
     border: 0;
-    background-color: rgb(205, 110, 110);
-    border: 2px solid rgb(205, 110, 110);
+    background-color: rgb(78, 89, 122);
+    border: 2px solid rgb(78, 89, 122);
     color: white;
     font-weight: bold;
     transition: all 0.20s;
@@ -12,8 +12,8 @@
 }
 
 .general-btn:hover {
-    background-color: rgb(226, 147, 147);
-    border: 2px solid rgb(226, 147, 147);
+    background-color: rgb(108, 119, 153);
+    border: 2px solid rgb(108, 119, 153);
 }
 
 .general-btn:active {
@@ -22,10 +22,10 @@
 
 .return-btn {
     padding: 20px;
-    border: 2px solid rgb(205, 110, 110);
+    border: 2px solid rgb(78, 89, 122);
     border-radius: 6px;
     background-color: white;
-    color: rgb(205, 110, 110);
+    color: rgb(78, 89, 122);
     font-weight: bold;
     transition: all 0.20s;
     cursor: pointer;
@@ -36,7 +36,7 @@
 }
 
 .return-btn:hover {
-    background-color: rgb(255, 243, 243);
+    background-color: rgb(237, 244, 255);
 
 }
 
@@ -45,10 +45,10 @@
     width: 40px;
     
     padding: 5px;
-    border: 2px solid rgb(205, 110, 110);
+    border: 2px solid rgb(78, 89, 122);
     border-radius: 100%;
     background-color: white;
-    color: rgb(205, 110, 110);
+    color: rgb(78, 89, 122);
     font-weight: bold;
     font-size: 1.2rem;
     transition: all 0.20s;

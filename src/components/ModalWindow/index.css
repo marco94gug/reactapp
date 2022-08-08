@@ -12,10 +12,11 @@
     background-color: rgba(0, 0, 0, 0.218);
     
     
+    
 }
 
 .ModalWindow__window {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.664);
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -23,6 +24,7 @@
     border-radius: 8px;
     transform: scale(0.0);
     transition: all 0.5s;
+    backdrop-filter: blur(5px);
     
 }
 
