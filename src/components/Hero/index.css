@@ -1,0 +1,35 @@
+.Hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    /* text-align: center; */
+    padding: 20px;
+    gap: 10px;
+}
+
+.Hero h1,
+.Hero h2 {
+    margin: 0;
+    padding: 0;
+}
+
+.title {
+    color: rgb(78, 89, 122);
+}
+
+.presentation-text,
+.subtitle,
+.description-text {
+  color: rgb(144, 151, 171);  
+}
+
+.edgemony {
+    color: rgb(111, 208, 179);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.edgemony:hover {
+    text-decoration: underline;
+}

@@ -11,7 +11,7 @@
     align-items: flex-end;
 }
 
-li {
+.menu-list li {
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -34,6 +34,9 @@ li {
     display: flex;
     justify-content: flex-end;
     gap: 8px;
-    width: 100%;
-    
+    width: 100%;  
+}
+
+.btn-knowledge {
+    padding: 20px 0;
 }
