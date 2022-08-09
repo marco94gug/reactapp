@@ -5,12 +5,24 @@
     align-items: center;
     padding: 50px 40px;
     gap: 20px;
+    transition: all 1.0s;
+    
 }
 
 .Experiences__all {
     display: flex;
     flex-direction: column;
     gap:30px;
+    /* opacity: 0; */
+    transition: all 0.8s;
+    opacity: 0;
+    transform: translateY(80px);
+   
+}
+
+.Experiences__all.active {
+    opacity: 1;
+    transform: translateY(0px);
 }
 
 /* .Experiences__content {
@@ -33,6 +45,7 @@
    margin-top: 40px;
    text-align: center;
    font-size: 0.8rem;
+   z-index: 1;
 }
 
 .experiences__date {

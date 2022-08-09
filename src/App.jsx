@@ -12,6 +12,7 @@ import Hero from './components/Hero';
 import SlideModal from './components/SlideModal';
 import Logo from './assets/logoW.png';
 import Experiences from './components/Experiences';
+import MyProjects from './components/MyProjects';
 
 const menuList = [
   {
@@ -93,6 +94,7 @@ function App() {
       <main className="main_section">
         {sectionValue === "About" && <Hero/>}
         {sectionValue === "Experiences" && <Experiences />}
+        {sectionValue === "My Projects" && <MyProjects />}
         <SlideModal slideVisible={slideVisible} setSlideVisible={setSlideVisible}>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, numquam. Quos atque dolor natus consectetur!</p>
       </SlideModal> 

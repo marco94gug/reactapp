@@ -16,6 +16,15 @@
 
 .title {
     color: rgb(78, 89, 122);
+    transition: all 0.8s;
+    transition-delay: .4s;
+    opacity: 0;
+    transform: scale(0.9);
+}
+
+.title.active {
+    opacity: 1;
+    transform: scale(1);
 }
 
 .presentation-text,
@@ -36,4 +45,40 @@
 
 .presentation-text {
     letter-spacing: 4px;
+    opacity: 0;
+    transition: opacity 0.8s;
+}
+
+.presentation-text.active {
+    opacity: 1;
+}
+
+.subtitle {
+    transition: all 1.4s;
+    transition-delay: 1s;
+    opacity: 0;
+}
+
+.subtitle.active {
+    opacity: 1;
+}
+
+.description-text {
+    transition: all 1.4s;
+    transition-delay: 1s;
+    opacity: 0;
+}
+
+.description-text.active {
+    opacity: 1;
+}
+
+.Hero button {
+    transition: all 2s;
+    transition-delay: 2s;
+    opacity: 0;
+}
+
+.Hero button.active {
+    opacity: 1;
 }

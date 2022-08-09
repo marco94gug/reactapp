@@ -1,13 +1,20 @@
 import './index.css';
+import {useEffect, useState} from 'react';
 
 const Experiences = () => {
+
+    const [isActive, setActive] = useState(false)
+
+    useEffect(() => {
+        setActive(true);
+    },[])
 
     return (
         <div className="Experiences">
             <div className="Experiences__title">
                 <h2>Where I've Worked</h2>
             </div>
-            <div className="Experiences__all">
+            <div className={!isActive ? "Experiences__all" : "Experiences__all active"}>
                 <div className="Experiences__content">
                     <h2>Deck Officier</h2>
                     <p className="experiences__date">
