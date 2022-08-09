@@ -1,0 +1,49 @@
+.Experiences {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 40px;
+    gap: 20px;
+}
+
+.Experiences__all {
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+}
+
+/* .Experiences__content {
+    margin: 20px 0;
+} */
+
+.Experiences__title,
+.Experiences__content h2 {
+    color: rgb(78, 89, 122);
+}
+
+.Experiences__title {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    padding: 4px 0;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.069);
+   margin-top: 40px;
+   text-align: center;
+   font-size: 0.8rem;
+}
+
+.experiences__date {
+    color: rgb(144, 151, 171); 
+    font-size: 0.8rem;
+    font-weight: 200;
+}
+
+.experiences__paragraph_3,
+.experiences__paragraph_2,
+.experiences__paragraph_1 {
+    color: rgb(144, 151, 171); 
+    margin: 10px 0;
+}

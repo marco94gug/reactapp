@@ -33,3 +33,7 @@
 .edgemony:hover {
     text-decoration: underline;
 }
+
+.presentation-text {
+    letter-spacing: 4px;
+}

@@ -11,6 +11,7 @@ import Hero from './components/Hero';
 // import ModalWindow from './components/ModalWindow';
 import SlideModal from './components/SlideModal';
 import Logo from './assets/logoW.png';
+import Experiences from './components/Experiences';
 
 const menuList = [
   {
@@ -54,23 +55,27 @@ function App() {
 //   setValue(false);
 //   }
   const handleOnClickList = (item) => {
-    setSectionValue(item)
+    
     console.log(sectionValue);
     if (item === 'Contact') {
       setSlideVisible(true)
       setActive(!isActive)
+      
     }
     if (item === 'About') {
       setSlideVisible(false)
       setActive(!isActive)
+      setSectionValue(item)
     }
     if (item === 'Experiences') {
       setSlideVisible(false)
       setActive(!isActive)
+      setSectionValue(item)
     }
     if (item === 'My Projects') {
       setSlideVisible(false)
       setActive(!isActive)
+      setSectionValue(item)
     }
   }
 
@@ -84,8 +89,10 @@ function App() {
           { menuList.map((item, index) => <li onClick={() => handleOnClickList(item.text)} key={item.text + index}>{item.icon}{item.text}</li> )}
         </ul>
       </HamMenu>
+      
       <main className="main_section">
-        <Hero/>
+        {sectionValue === "About" && <Hero/>}
+        {sectionValue === "Experiences" && <Experiences />}
         <SlideModal slideVisible={slideVisible} setSlideVisible={setSlideVisible}>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, numquam. Quos atque dolor natus consectetur!</p>
       </SlideModal> 
