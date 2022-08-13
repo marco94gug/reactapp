@@ -27,7 +27,7 @@
     background: none;
     color: rgb(78, 89, 122);
     font-weight: bold;
-    transition: all 0.20s;
+    background-color: white;
     cursor: pointer;
 }
 
@@ -37,6 +37,8 @@
 
 .return-btn:hover {
     background-color: rgb(237, 244, 255);
+    transition-delay: 0;
+    transition: background-color 0.30s;
 
 }
 
