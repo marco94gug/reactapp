@@ -12,6 +12,7 @@
     background-color: ghostwhite;
     transition: all 0.45s;
     text-align: center;
+    z-index: 2;
 }
 
 .SlideModal.active {

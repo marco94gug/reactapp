@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import {useState, useRef} from 'react'
 import './App.css';
 import { BiUser } from "react-icons/bi";
 import { AiOutlineProject, AiOutlineMail } from "react-icons/ai";
@@ -13,32 +13,46 @@ import SlideModal from './components/SlideModal';
 import Logo from './assets/logoW.png';
 import Experiences from './components/Experiences';
 import MyProjects from './components/MyProjects';
-
-const menuList = [
-  {
-    text: 'About',
-    icon: <BiUser className='aboutme' />
-  },
-  {
-    text: 'Experiences',
-    icon: <AiOutlineProject className='experiences'/>
-  },
-  {
-    text: 'My Projects',
-    icon: <MdOutlineWorkOutline className='my_projects'/>
-  },
-  {
-    text: 'Contact',
-    icon: <AiOutlineMail className='contact'/>
-  }
-]
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
+  const about = useRef(null);
+  const experience = useRef(null);
+  const myProjects = useRef(null);
+
+  const menuList = [
+    {
+      text: 'About',
+      icon: <BiUser className='aboutme' />, 
+      ref: about,
+    },
+    {
+      text: 'Experiences',
+      icon: <AiOutlineProject className='experiences'/>,
+      ref: experience,
+    },
+    {
+      text: 'My Projects',
+      icon: <MdOutlineWorkOutline className='my_projects'/>,
+      ref: myProjects,
+    },
+    {
+      text: 'Contact',
+      icon: <AiOutlineMail className='contact'/>
+    }
+  ]
+
   // const [value, setValue] = useState(false)
   const [slideVisible, setSlideVisible] = useState(false)
   const [sectionValue, setSectionValue] = useState('About');
   const [isActive, setActive] = useState(false);
 
+  const scrollToSection = (elementRef) => {
+    window.scrollTo({
+      top: elementRef.current.offsetTop,
+      behavior: 'smooth',
+    })
+  }
 
   // const handleOnClickAccept = () => {
   //   setValue(true);
@@ -82,19 +96,23 @@ function App() {
 
   return (
     <div className="App">
+      <ScrollToTop />
       <Navbar>
         <img className="Logo" src={Logo} alt="logo"/>
       </Navbar>
       <HamMenu setActive={setActive} isActive={isActive}>
         <ul className='menu-list'>
-          { menuList.map((item, index) => <li onClick={() => handleOnClickList(item.text)} key={item.text + index}>{item.icon}{item.text}</li> )}
+          { menuList.map((item, index) => <li onClick={() => {handleOnClickList(item.text); scrollToSection(item.ref)}} key={item.text + index}>{item.icon}{item.text}</li> )}
         </ul>
       </HamMenu>
       
       <main className="main_section">
-        {sectionValue === "About" && <Hero/>}
+        {/* {sectionValue === "About" && <Hero/>}
         {sectionValue === "Experiences" && <Experiences />}
-        {sectionValue === "My Projects" && <MyProjects />}
+        {sectionValue === "My Projects" && <MyProjects />} */}
+        <Hero myRef={about} />
+        <Experiences myRef={experience} />
+        <MyProjects myRef={myProjects} />
         <SlideModal slideVisible={slideVisible} setSlideVisible={setSlideVisible}>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, numquam. Quos atque dolor natus consectetur!</p>
       </SlideModal> 

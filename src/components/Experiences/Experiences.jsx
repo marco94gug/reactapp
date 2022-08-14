@@ -1,7 +1,7 @@
 import './index.css';
 import {useEffect, useState} from 'react';
 
-const Experiences = () => {
+const Experiences = ({myRef}) => {
 
     const [isActive, setActive] = useState(false)
 
@@ -10,10 +10,10 @@ const Experiences = () => {
     },[])
 
     return (
-        <div className="Experiences">
-            <div className="Experiences__title">
+        <div ref={myRef} className="Experiences">
+            {/* <div className="Experiences__title">
                 <h2>Where I've Worked</h2>
-            </div>
+            </div> */}
             <div className={!isActive ? "Experiences__all" : "Experiences__all active"}>
                 <div className="Experiences__content">
                     <h2>Deck Officier</h2>

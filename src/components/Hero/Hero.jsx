@@ -2,7 +2,7 @@ import './index.css'
 import Button from '../Button'
 import {useEffect, useState} from 'react';
 
-export default function Hero() {
+export default function Hero({myRef}) {
 const [value, setValue] = useState('');
 
     useEffect(() => {
@@ -15,7 +15,7 @@ const [value, setValue] = useState('');
     
    
     return (
-        <div className="Hero">
+        <div ref={myRef} className="Hero">
             <p className={`presentation-text ${value}`}>Hi, my name is</p>
             <h1 className={`title ${value}`}>Marco Guglielmino.</h1>
             <h2 className={`subtitle ${value}`}>I build things for the web.</h2>
