@@ -1,4 +1,4 @@
-import {useState, useRef, useEffect} from 'react'
+import {useState, useRef} from 'react'
 import './App.css';
 import { BiUser } from "react-icons/bi";
 import { AiOutlineProject, AiOutlineMail } from "react-icons/ai";
