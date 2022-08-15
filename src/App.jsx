@@ -20,6 +20,7 @@ function App() {
   const about = useRef(null);
   const experience = useRef(null);
   const myProjects = useRef(null);
+  const knowledge = useRef(null);
   const hamMenu = useRef(null);
 
   // const [value, setValue] = useState(false)
@@ -125,8 +126,8 @@ function App() {
         {/* {sectionValue === "About" && <Hero/>}
         {sectionValue === "Experiences" && <Experiences />}
         {sectionValue === "My Projects" && <MyProjects />} */}
-        <Hero />
-        <About myRef={about}/>
+        <Hero onClick={scrollToSection} refValue={knowledge}/>
+        <About myRef={about} knowledgeRef={knowledge}/>
         <Experiences myRef={experience} />
         <MyProjects myRef={myProjects} />
         <SlideModal slideVisible={slideVisible} setSlideVisible={setSlideVisible}>

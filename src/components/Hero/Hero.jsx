@@ -2,7 +2,7 @@ import './index.css'
 import Button from '../Button'
 import {useEffect, useState} from 'react';
 
-export default function Hero({myRef}) {
+export default function Hero({myRef, onClick, refValue}) {
 const [value, setValue] = useState('');
 
     useEffect(() => {
@@ -24,7 +24,7 @@ const [value, setValue] = useState('');
               Currently I am improving my javascript, specifically the reactJS framework at <span onClick={handleOnClickLink} className='edgemony'>Edgemony</span>, 
               to grow my knowledge and enhance my creativity.</p>
             <div className="btn-knowledge">
-            <Button btnText="Check out my knowledge" className={`return-btn ${value}`}/>
+            <Button onClick={() => onClick(refValue)} btnText="Check out my knowledge" className={`return-btn ${value}`}/>
             </div>     
         </div>
     )

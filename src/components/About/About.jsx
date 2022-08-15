@@ -1,7 +1,7 @@
 import './index.css'
 import Avatar from '../../assets/avatar.png';
 
-export default function About({myRef}) {
+export default function About({myRef, knowledgeRef}) {
 
     return (
     <div ref={myRef} className="About">
@@ -23,7 +23,7 @@ export default function About({myRef}) {
                 </div>
             </div>
         </div>
-        <div className="About__knowledge">
+        <div ref={knowledgeRef} className="About__knowledge">
             <p className="title__knowledge">Here are a few technologies and skills I've been working recently:</p>
             <ul className="About__knowledge_list">
                 <li>Adobe Photoshop</li>
@@ -32,7 +32,7 @@ export default function About({myRef}) {
                 <li>Steinberg Cubase</li>
                 <li>Davinci Resolve</li>
                 <li>HTML/CSS</li>
-                <li>Javascript ECMA6</li>
+                <li>JavaScript ES6</li>
                 <li>React.Js</li>
             </ul>
         </div>
