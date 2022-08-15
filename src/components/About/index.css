@@ -1,0 +1,126 @@
+.About {
+    padding: 20px 40px;
+}
+
+.About p {
+    color: rgb(144, 151, 171);
+}
+
+.About__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: calc(100vh - 40px);
+    gap: 20px;
+}
+
+.About__title {
+    color: rgb(78, 89, 122);
+}
+
+.About__main_content_text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.About__improvement {
+    color: rgb(78, 89, 122);
+    font-weight: bold;
+}
+
+.About__main_content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.About__corner_avatar {
+    position: relative;
+    top: 8px;
+    left: 10px;
+    border: 2px solid #4d5a7a;
+    border-radius: 8px;
+}
+
+.overlay__avatar {
+    position: absolute;
+    z-index: 1;
+    bottom: 11px;
+    right: 10px;
+    width: 150px;
+    height: 167px;
+    background-color: #6879a358;
+    border-radius: 8px;
+}
+
+.About__avatar {
+    position: relative;
+    bottom: 8px;
+    right: 10px;
+    width: 150px;
+    border-radius: 8px;
+    filter: saturate(0.4) brightness(1.2);    
+}
+
+.About__knowledge {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.About__knowledge_list {
+    list-style: none;
+    display: grid; 
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr 1fr; 
+    gap: 10px 0px; 
+    font-size: 0.8rem;
+    color:rgb(78, 89, 122);
+}
+
+.About__knowledge_list li::before {
+    content: "▹";
+    margin-right: 15px;
+    color:#4d5a7a;
+    font-size: var(--fz-sm);
+    line-height: 12px;
+}
+
+@media only screen and (min-width: 768px) {
+
+    .About {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 80px;
+        height: calc(100vh - 40px);
+    }
+
+    .About__container {
+        height: auto;
+    }
+
+    .About__main_content {
+        flex-direction: row;
+        align-items:  flex-start;
+    }
+    .About__main_content_text {
+        padding: 10px 0; 
+    }
+    
+    .overlay__avatar {
+        width: 250px;
+        height: 278.5px;
+    }
+    
+    .About__avatar {
+        width: 250px;   
+    }
+}

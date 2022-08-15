@@ -2,7 +2,7 @@ import './index.css';
 import { useEffect, useState} from 'react';
 import { IoMdArrowDropupCircle } from "react-icons/io";
 
-const ScrollToTop = () => {
+const ScrollToTop = ({scrollTop}) => {
     const [showScrollTopButton, setShowScrollTopButton] = useState(false);
 
     useEffect(() => {
@@ -13,13 +13,6 @@ const ScrollToTop = () => {
             setShowScrollTopButton(false);
         }});
     }, [])
-
-    const scrollTop = () => {
-        window.scrollTo({
-          top: -40,
-          behavior: 'smooth',
-        })
-      }
 
     return (
         <div className="ScrollToTop">

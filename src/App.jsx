@@ -14,6 +14,7 @@ import Logo from './assets/logoW.png';
 import Experiences from './components/Experiences';
 import MyProjects from './components/MyProjects';
 import ScrollToTop from './components/ScrollToTop';
+import About from './components/About/About';
 
 function App() {
   const about = useRef(null);
@@ -50,6 +51,13 @@ function App() {
   const scrollToSection = (elementRef) => {
     window.scrollTo({
       top: elementRef.current.offsetTop - 40,
+      behavior: 'smooth',
+    })
+  };
+
+  const scrollTop = () => {
+    window.scrollTo({
+      top: -40,
       behavior: 'smooth',
     })
   }
@@ -96,9 +104,9 @@ function App() {
 
   return (
     <div className="App">
-      <ScrollToTop />
+      <ScrollToTop scrollTop={scrollTop} />
       <Navbar>
-        <img className="Logo" src={Logo} alt="logo"/>
+        <img onClick={scrollTop} className="Logo" src={Logo} alt="logo"/>
       </Navbar>
       <HamMenu setActive={setActive} isActive={isActive}>
         <ul className='menu-list'>
@@ -110,7 +118,8 @@ function App() {
         {/* {sectionValue === "About" && <Hero/>}
         {sectionValue === "Experiences" && <Experiences />}
         {sectionValue === "My Projects" && <MyProjects />} */}
-        <Hero myRef={about} />
+        <Hero />
+        <About myRef={about}/>
         <Experiences myRef={experience} />
         <MyProjects myRef={myProjects} />
         <SlideModal slideVisible={slideVisible} setSlideVisible={setSlideVisible}>
