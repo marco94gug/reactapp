@@ -6,9 +6,9 @@ const MyProjects = ({myRef}) => {
 
     return (
         <div ref={myRef} className="MyProjects">
-            <h2 className="MyProjects-title">My Projects</h2>
+            <h2 className="MyProjects-title">My Recent Work</h2>
             <ImageGallery items={images} showFullscreenButton={true} useBrowserFullscreen={false} showPlayButton={false} autoPlay={false} />
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo saepe temporibus esse facere numquam soluta?</p>
+            <p>Here are some of the selected project I have been working on!</p>
         </div>
     )
 }
