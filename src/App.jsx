@@ -7,7 +7,7 @@ import { MdOutlineWorkOutline } from "react-icons/md";
 import Navbar from './components/Navbar';
 import HamMenu from './components/HamMenu';
 import Hero from './components/Hero';
-// import Button from './components/Button';
+import Button from './components/Button';
 // import ModalWindow from './components/ModalWindow';
 import SlideModal from './components/SlideModal';
 import Logo from './assets/logoW.png';
@@ -118,7 +118,7 @@ function App() {
       </Navbar>
       <HamMenu myRef={hamMenu} setActive={setActive} isActive={isActive}>
         <ul className='menu-list'>
-          { menuList.map((item, index) => <li onClick={() => {handleOnClickList(item.text); scrollToSection(item.ref)}} key={item.text + index}>{item.icon}{item.text}</li> )}
+          { menuList.map((item, index) => <li onClick={() => {handleOnClickList(item.text); (item.ref && scrollToSection(item.ref))}} key={item.text + index}>{item.icon}{item.text}</li> )}
         </ul>
       </HamMenu>
       
@@ -131,7 +131,11 @@ function App() {
         <Experiences myRef={experience} />
         <MyProjects myRef={myProjects} />
         <SlideModal slideVisible={slideVisible} setSlideVisible={setSlideVisible}>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, numquam. Quos atque dolor natus consectetur!</p>
+          <h2>Interested in collaborating with me?</h2>
+        <p>My inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!</p>
+        <a href="mailto:marco.guglielmino94@gmail.com">
+          <Button btnText="Say Hello!" className="return-btn"/>
+        </a>
       </SlideModal> 
           
         {/* <div className="button-container">

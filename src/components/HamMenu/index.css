@@ -62,7 +62,7 @@
     padding: 0;
     /* width: 60%;
     height: 80%; */
-    z-index: 3;
+    z-index: 5;
     transition: all 0.35s;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.174);
 }
@@ -70,4 +70,72 @@
 .HamMenu.active {
     top: 40px;
     right: 0;
+}
+
+.menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 10px 0;
+    align-items: flex-end;
+}
+
+.menu-list li {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    padding: 5px 20px;
+    cursor: pointer;
+}
+
+.menu-list li:hover {
+    background-color: rgb(78, 89, 122);
+    color: white;
+    
+}
+
+@media only screen and (min-width: 768px) {
+    .toggle {
+        display: none;
+    }
+
+    .HamMenu {
+        display: flex;
+        justify-content: center;
+        position: fixed;
+        top: 0vh;
+        background: none;
+        box-shadow: none;
+        /* width: 50%; */
+        z-index: 999;
+        color: white;
+        font-weight: 500;
+        height: 40px;
+        align-items: center;
+        margin-right: 20px;
+    }
+
+    .menu-list {
+        flex-direction: row;
+        width: auto;
+        gap: 0;
+    }
+
+    .menu-list li {
+        align-items: center;
+        font-size: 0.8rem;
+        gap:5px;
+        width: 130px;
+        height: 40px;
+        transition: all .35s;
+    }
+    .menu-list li:hover {
+        background-color:  rgba(248, 248, 255, 0.294);
+        
+    }
+
 }

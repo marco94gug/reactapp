@@ -8,6 +8,14 @@ import Social_two from '../assets/website/social_two.jpg'
 
 export const images = [
     {
+        original: Social_one,
+        thumbnail: Social_one,
+      },
+      {
+        original: Social_two,
+        thumbnail: Social_two,
+      },
+    {
       original: CloudLanding_one,
       thumbnail: CloudLanding_one,
     },
@@ -27,14 +35,7 @@ export const images = [
         original: GalleryLanding_two,
         thumbnail: GalleryLanding_two,
       },
-      {
-        original: Social_one,
-        thumbnail: Social_one,
-      },
-      {
-        original: Social_two,
-        thumbnail: Social_two,
-      },
+     
   ];
 
 

@@ -60,7 +60,7 @@
 .image-gallery.fullscreen-modal {
     background-color: rgba(0, 0, 0, 0.51);
     backdrop-filter: blur(2px);
-    
+    z-index: 9999;
 }
 
 .image-gallery.fullscreen-modal .image-gallery-slides {

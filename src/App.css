@@ -3,32 +3,6 @@
     color: rgb(50, 50, 50);
 }
 
-.menu-list {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin: 10px 0;
-    align-items: flex-end;
-}
-
-.menu-list li {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    gap: 20px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    padding: 5px 20px;
-    cursor: pointer;
-}
-
-.menu-list li:hover {
-    background-color: rgb(78, 89, 122);
-    color: white;
-    
-}
-
 .main_section {
     min-height: calc(100vh - 40px);
     display: flex;

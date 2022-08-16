@@ -1,18 +1,24 @@
 .SlideModal {
-    padding: 20px;
+    padding: 40px;
     position: fixed;
     top: 40px;
     right: -100vw;
-    height: 100vh;
+    height: calc(100vh - 40px);
     width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 40px;
     align-items: center;
     background-color: ghostwhite;
     transition: all 0.45s;
     text-align: center;
-    z-index: 2;
+    z-index: 4;
+    color: rgb(144, 151, 171);
+}
+
+.SlideModal h2 {
+    color: rgb(78, 89, 122);
 }
 
 .SlideModal.active {
@@ -20,8 +26,9 @@
 }
 
 .btn-container {
-    position: relative;
-    top: -40vh;
+    position: absolute;
+    top: 15px;
+    left: 15px;
     width: 100%;
     text-align: left;
     
