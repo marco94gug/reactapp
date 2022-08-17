@@ -47,6 +47,11 @@
     border-radius: 8px;
 }
 
+.avatar-container {
+    height: 168px;
+    align-items: center;
+}
+
 .avatar-img-over {
     position: relative;
     top: 34px;

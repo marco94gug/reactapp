@@ -15,7 +15,7 @@ const Experiences = ({myRef}) => {
         }
     })
         return () => {window.removeEventListener('scroll', () => setActive(false))}
-    },[])
+    },[myRef])
 
     return (
         <div ref={myRef} className="Experiences">

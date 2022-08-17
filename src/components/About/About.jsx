@@ -1,5 +1,5 @@
 import './index.css'
-import { Parallax, useParallax } from 'react-scroll-parallax';
+import { Parallax } from 'react-scroll-parallax';
 
 import Avatar from '../../assets/avatar.png';
 

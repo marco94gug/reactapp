@@ -1,5 +1,5 @@
-import {useState, useRef} from 'react'
 import './App.css';
+import {useState, useRef} from 'react'
 import { BiUser } from "react-icons/bi";
 import { AiOutlineProject, AiOutlineMail } from "react-icons/ai";
 import { MdOutlineWorkOutline } from "react-icons/md";
@@ -23,7 +23,6 @@ function App() {
   const hamMenu = useRef(null);
 
   const [slideVisible, setSlideVisible] = useState(false)
-  const [sectionValue, setSectionValue] = useState('About');
   const [isActive, setActive] = useState(false);
 
   const menuList = [
@@ -65,20 +64,16 @@ function App() {
   const handleOnClickList = (item) => {
     
     if (item === 'Contact') {
-      setSlideVisible(true)
-      
+      setSlideVisible(true)   
     }
     if (item === 'About') {
       setSlideVisible(false)
-      setSectionValue(item)
     }
     if (item === 'Experiences') {
       setSlideVisible(false)
-      setSectionValue(item)
     }
     if (item === 'My Projects') {
       setSlideVisible(false)
-      setSectionValue(item)
     }
   }
 
