@@ -21,10 +21,10 @@ export default function About({myRef, knowledgeRef}) {
                     </p>
                 </div>
                     <div className="avatar-container">
-                    <Parallax translateY={[-60, 40]} translateX={[-60, 47]}>
+                    <Parallax translateY={[-60, 40]} translateX={[-60, 47]} opacity={[-3, 5]}>
                         <div className="About__corner_avatar" />
                     </Parallax>
-                    <Parallax translateY={[40, -84]} translateX={[38, -68]}>
+                    <Parallax translateY={[40, -84]} translateX={[38, -68]} opacity={[-0.9, 8]}>
                             <div className="avatar-img-over">    
                                 <div className="overlay__avatar" />
                                 <img className="About__avatar" src={Avatar} alt="avatar" /> 

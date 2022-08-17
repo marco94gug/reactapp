@@ -7,7 +7,7 @@ export default function LoadingScreen ({isVisible}) {
 
     useEffect(() => {
         setTimeout(() => setValue("active"), 200);
-    setTimeout(() => setValue(""), 1500);
+        setTimeout(() => setValue(""), 1500);
     }, [])
     return (
         <div className={isVisible ? "LoadingScreen" : "LoadingScreen deactivate"}>
