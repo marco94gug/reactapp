@@ -1,4 +1,6 @@
 import './index.css'
+import { Parallax, useParallax } from 'react-scroll-parallax';
+
 import Avatar from '../../assets/avatar.png';
 
 export default function About({myRef, knowledgeRef}) {
@@ -6,7 +8,8 @@ export default function About({myRef, knowledgeRef}) {
     return (
     <div ref={myRef} className="About">
         <div className="About__container">
-            <h2 className='About__title'>About me:</h2>
+            <h2  className='About__title'>About me:</h2>
+            
             <div className="About__main_content">
                 <div className="About__main_content_text">
                     <p>Hello! My name is Marco and I enjoy creating things that live on the internet. My interest in web development started from childhood, when I decided to try editing custom Tumblr themes.</p>
@@ -17,11 +20,19 @@ export default function About({myRef, knowledgeRef}) {
                     I am currently following an advanced Javascript and ReactJS course at Edgemony.
                     </p>
                 </div>
-                <div className="About__corner_avatar">
-                    <div className="overlay__avatar" />
-                    <img className="About__avatar" src={Avatar} alt="avatar" />  
-                </div>
+                    <div className="avatar-container">
+                    <Parallax translateY={[-60, 40]} translateX={[-60, 47]}>
+                        <div className="About__corner_avatar" />
+                    </Parallax>
+                    <Parallax translateY={[40, -84]} translateX={[38, -68]}>
+                            <div className="avatar-img-over">    
+                                <div className="overlay__avatar" />
+                                <img className="About__avatar" src={Avatar} alt="avatar" /> 
+                            </div>
+                    </Parallax>
+                    </div> 
             </div>
+            
         </div>
         <div ref={knowledgeRef} className="About__knowledge">
             <p className="title__knowledge">Here are a few technologies and skills I've been working recently:</p>
