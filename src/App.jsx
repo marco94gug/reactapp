@@ -1,5 +1,5 @@
 import './App.css';
-import {useState, useRef} from 'react'
+import {useState, useRef, useEffect} from 'react'
 import { BiUser } from "react-icons/bi";
 import { AiOutlineProject, AiOutlineMail } from "react-icons/ai";
 import { MdOutlineWorkOutline } from "react-icons/md";
@@ -14,6 +14,7 @@ import Experiences from './components/Experiences';
 import MyProjects from './components/MyProjects';
 import ScrollToTop from './components/ScrollToTop';
 import About from './components/About/About';
+import LoadingScreen from './components/LoadingScreen';
 
 function App() {
   const about = useRef(null);
@@ -24,6 +25,7 @@ function App() {
 
   const [slideVisible, setSlideVisible] = useState(false)
   const [isActive, setActive] = useState(false);
+  const [isVisible, setVisible] = useState(true);
 
   const menuList = [
     {
@@ -47,6 +49,10 @@ function App() {
     }
   ]
  
+  useEffect(() => {
+    setTimeout(() => {setVisible(false)}, 2500);
+  }, [])
+
   const scrollToSection = (elementRef) => {
     window.scrollTo({
       top: elementRef.current.offsetTop - 40,
@@ -85,6 +91,10 @@ function App() {
 
   return (
     <div onClick={(e) => appClick(e)} className="App">
+      <LoadingScreen isVisible={isVisible}/>
+      {!isVisible &&
+      (
+        <>
       <ScrollToTop scrollTop={scrollTop} />
       <Navbar>
         <img onClick={scrollTop} className="Logo" src={Logo} alt="logo"/>
@@ -108,6 +118,9 @@ function App() {
           </a>
         </SlideModal> 
         </main>
+        </>
+        )
+}
     </div>
   );
 }
