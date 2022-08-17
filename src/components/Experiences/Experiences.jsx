@@ -6,8 +6,26 @@ const Experiences = ({myRef}) => {
     const [isActive, setActive] = useState(false)
 
     useEffect(() => {
-        setActive(true);
+        window.addEventListener('scroll', () => {
+        if (window.scrollY > myRef.current.offsetTop - 500 && window.scrollY < myRef.current.offsetTop + myRef.current.offsetHeight - 200) {
+            setActive(true);
+        }
+        else {
+            setActive(false);
+        }
+    })
+        return () => {window.removeEventListener('scroll', () => setActive(false))}
     },[])
+
+    // window.addEventListener('scroll', () => {
+
+    //     if (window.scrollY > myRef.current.offsetTop - 500 && window.scrollY < myRef.current.offsetTop + myRef.current.offsetHeight - 200) {
+    //         setActive(true);
+    //     }
+    //     else {
+    //         setActive(false);
+    //     }
+    // })
 
     return (
         <div ref={myRef} className="Experiences">

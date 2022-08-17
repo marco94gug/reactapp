@@ -24,7 +24,40 @@
 
 .Experiences__all.active {
     opacity: 1;
-    transform: translateY(0px);
+    transform: translateX(0px);
+}
+
+.Experiences__all div:nth-child(1) {
+    transition: all 1s;
+    transform: translateX(100px);
+}
+
+.Experiences__all.active div:nth-child(1) {
+    transform: translateX(0);
+}
+
+.Experiences__all div:nth-child(2) {
+    transition: all 1s;
+    transition-delay: .5s;
+    opacity: 0;
+    transform: translateX(100px);
+}
+
+.Experiences__all.active div:nth-child(2) {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.Experiences__all div:nth-child(3) {
+    transition: all 1s;
+    transition-delay: 1s;
+    opacity: 0;
+    transform: translateX(100px);
+}
+
+.Experiences__all.active div:nth-child(3) {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 /* .Experiences__content {
@@ -37,14 +70,8 @@
 }
 
 .Experiences__title {
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    width: 100vw;
+
     padding: 4px 0;
-    background-color: white;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.069);
-   margin-top: 40px;
    text-align: center;
    font-size: 0.8rem;
    z-index: 1;
@@ -75,6 +102,39 @@
 
 .Experiences__content {
     width: 33%;
+}
+
+.Experiences__all div:nth-child(1) {
+    transition: all 1s;
+    transform: translateY(100px);
+}
+
+.Experiences__all.active div:nth-child(1) {
+    transform: translateY(0);
+}
+
+.Experiences__all div:nth-child(2) {
+    transition: all 1s;
+    transition-delay: .5s;
+    opacity: 0;
+    transform: translateY(100px);
+}
+
+.Experiences__all.active div:nth-child(2) {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.Experiences__all div:nth-child(3) {
+    transition: all 1s;
+    transition-delay: 1s;
+    opacity: 0;
+    transform: translateY(100px);
+}
+
+.Experiences__all.active div:nth-child(3) {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 }
