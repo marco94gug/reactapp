@@ -1,11 +1,12 @@
 .App {
-    width: 100vw;
+    
     color: rgb(50, 50, 50);
+    
 }
 
 .main_section {
     min-height: calc(100vh - 40px);
-    width: 100vw;;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;

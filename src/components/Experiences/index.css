@@ -96,6 +96,10 @@
         margin-top: 0;
     }
 
+    .Experiences__title {
+        transform: translateY(-50px);
+    }
+
     .Experiences__all {
     flex-direction: row;
 }

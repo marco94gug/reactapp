@@ -17,21 +17,11 @@ const Experiences = ({myRef}) => {
         return () => {window.removeEventListener('scroll', () => setActive(false))}
     },[])
 
-    // window.addEventListener('scroll', () => {
-
-    //     if (window.scrollY > myRef.current.offsetTop - 500 && window.scrollY < myRef.current.offsetTop + myRef.current.offsetHeight - 200) {
-    //         setActive(true);
-    //     }
-    //     else {
-    //         setActive(false);
-    //     }
-    // })
-
     return (
         <div ref={myRef} className="Experiences">
-            {/* <div className="Experiences__title">
+            <div className="Experiences__title">
                 <h2>Where I've Worked</h2>
-            </div> */}
+            </div>
             <div className={!isActive ? "Experiences__all" : "Experiences__all active"}>
                 <div className="Experiences__content">
                     <h2>Deck Officier</h2>

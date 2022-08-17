@@ -13,7 +13,7 @@
     background-color: ghostwhite;
     transition: all 0.45s;
     text-align: center;
-    z-index: 4;
+    z-index: 5;
     color: rgb(144, 151, 171);
 }
 
@@ -32,4 +32,10 @@
     width: 100%;
     text-align: left;
     
+}
+
+@media only screen and (min-width: 768px) {
+    .btn-container { 
+        left: 30px;
+    }
 }

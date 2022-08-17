@@ -7,10 +7,5 @@
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   font-family: 'Raleway', Helvetica, Arial, sans-serif;
-  width: 100vw;
 }

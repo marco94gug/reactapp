@@ -8,7 +8,6 @@ import Navbar from './components/Navbar';
 import HamMenu from './components/HamMenu';
 import Hero from './components/Hero';
 import Button from './components/Button';
-// import ModalWindow from './components/ModalWindow';
 import SlideModal from './components/SlideModal';
 import Logo from './assets/logoW.png';
 import Experiences from './components/Experiences';
@@ -23,7 +22,6 @@ function App() {
   const knowledge = useRef(null);
   const hamMenu = useRef(null);
 
-  // const [value, setValue] = useState(false)
   const [slideVisible, setSlideVisible] = useState(false)
   const [sectionValue, setSectionValue] = useState('About');
   const [isActive, setActive] = useState(false);
@@ -64,42 +62,22 @@ function App() {
     })
   }
 
-  // const handleOnClickAccept = () => {
-  //   setValue(true);
-  //   console.log(value)
-  // }
-  // const handleOnClickCancel = () => {
-  //   setValue(false);
-  //   console.log(value);
-  // }
-  // const handleOnClickSlide = () => {
-  // setSlideVisible(true);
-  // }
-//   const handleModalClose = (e) => {
-// if (e.target.classList.contains('ModalWindow__overlay'))
-//   setValue(false);
-//   }
   const handleOnClickList = (item) => {
     
-    console.log(sectionValue);
     if (item === 'Contact') {
       setSlideVisible(true)
-      // setActive(!isActive)
       
     }
     if (item === 'About') {
       setSlideVisible(false)
-      // setActive(!isActive)
       setSectionValue(item)
     }
     if (item === 'Experiences') {
       setSlideVisible(false)
-      // setActive(!isActive)
       setSectionValue(item)
     }
     if (item === 'My Projects') {
       setSlideVisible(false)
-      // setActive(!isActive)
       setSectionValue(item)
     }
   }
@@ -123,37 +101,17 @@ function App() {
       </HamMenu>
       
       <main className="main_section">
-        {/* {sectionValue === "About" && <Hero/>}
-        {sectionValue === "Experiences" && <Experiences />}
-        {sectionValue === "My Projects" && <MyProjects />} */}
         <Hero onClick={scrollToSection} refValue={knowledge}/>
         <About myRef={about} knowledgeRef={knowledge}/>
         <Experiences myRef={experience} />
         <MyProjects myRef={myProjects} />
         <SlideModal slideVisible={slideVisible} setSlideVisible={setSlideVisible}>
           <h2>Interested in collaborating with me?</h2>
-        <p>My inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!</p>
-        <a href="mailto:marco.guglielmino94@gmail.com">
+          <p>My inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!</p>
+          <a href="mailto:marco.guglielmino94@gmail.com">
           <Button btnText="Say Hello!" className="return-btn"/>
-        </a>
-      </SlideModal> 
-          
-        {/* <div className="button-container">
-          <Button btnText="Open SlideModal" className="return-btn" onClick={handleOnClickSlide} />
-          <Button btnText="Open ModalWindow" className="general-btn" onClick={handleOnClickAccept} />
-        </div>
-      <SlideModal slideVisible={slideVisible} setSlideVisible={setSlideVisible}>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, numquam. Quos atque dolor natus consectetur!</p>
-      </SlideModal> 
-        
-        { value &&
-        <ModalWindow onClick={handleModalClose}>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa incidunt odio corrupti nobis nemo! Molestias, ut ad. Ad, laborum libero!</p>
-          <div className="button-container">
-            <Button btnText="Close" className="return-btn" onClick={handleOnClickCancel}/>
-            <Button btnText="Accept" className="general-btn" onClick={handleOnClickAccept} />
-          </div>
-        </ModalWindow> } */}
+          </a>
+        </SlideModal> 
         </main>
     </div>
   );
