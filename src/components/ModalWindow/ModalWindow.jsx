@@ -9,11 +9,13 @@ const ModalWindow = ({children, onClick}) => {
      }, [])
     
     return (
+        <>
         <div onClick={onClick}  className="ModalWindow__overlay">
             <div className={!windowVisible ? "ModalWindow__window" : "ModalWindow__window active"}  >
                 {children}
             </div>
         </div>
+        </>
     )
 }
 

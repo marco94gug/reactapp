@@ -1,9 +1,9 @@
 import './index.css';
 
-const Button = ({btnText, onClick = () => {}, className}) => {
+const Button = ({btnText, onClick = () => {}, className, disabled}) => {
 
     return (
-        <button type="submit" className={className} onClick={onClick} >{btnText}</button>
+        <button disabled={disabled} type="submit" className={className} onClick={onClick} >{btnText}</button>
     )
 }
 

@@ -56,3 +56,8 @@
     transition: all 0.20s;
     cursor: pointer;
 }
+
+.arrow {
+    background: none;
+    border: none;
+}

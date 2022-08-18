@@ -8,28 +8,40 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 10%;
-    /* background-color: rgba(0, 0, 0, 0.104); */
+    /* padding: 10%; */
+    background-color: rgba(0, 0, 0, 0.731);
+    z-index: 9999;
+    backdrop-filter: blur(4px);
     
-    
+}
+
+.ModalWindow__window img {
+    width: 100vw;
+    height: auto;
     
 }
 
 .ModalWindow__window {
-    background-color: rgba(255, 255, 255, 0.546);
-    display: flex;
-    flex-direction: column;
+    
+    
+    
     gap: 20px;
-    padding: 40px 40px;
-    border-radius: 8px;
     transform: scale(0.0);
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.107);
     transition: all 0.5s;
-    backdrop-filter: blur(4px);
-    cursor: move;
+    z-index: 9999;
+    
 }
 
 .ModalWindow__window.active {
     transform: scale(1.0);
+}
+
+@media only screen and (min-width: 768px) {
+
+    .ModalWindow__window img {
+        width: 80vw;
+        height: auto;
+    }
+
 }
 

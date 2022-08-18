@@ -108,8 +108,9 @@ function App() {
       <main className="main_section">
         <Hero onClick={scrollToSection} refValue={knowledge}/>
         <About myRef={about} knowledgeRef={knowledge}/>
+        <MyProjects aboutRef={about} myRef={myProjects} />
         <Experiences myRef={experience} />
-        <MyProjects myRef={myProjects} />
+        
         <SlideModal slideVisible={slideVisible} setSlideVisible={setSlideVisible}>
           <h2>Interested in collaborating with me?</h2>
           <p>My inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!</p>

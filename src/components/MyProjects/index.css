@@ -1,4 +1,5 @@
 @import "~react-image-gallery/styles/css/image-gallery.css";
+@import "react-alice-carousel/lib/alice-carousel.css";
 
 .MyProjects {
     display: flex;
@@ -17,6 +18,22 @@
 
 .MyProjects-title {
     color: rgb(78, 89, 122);
+}
+
+.MyProjects img {
+    height: 200px;
+}
+
+.img_container {
+    display: flex;
+    gap: 10px;
+    width: 90vw;
+    
+    overflow-x: scroll;
+}
+
+.img_container::-webkit-scrollbar {
+    opacity: 0;
 }
 
 .image-gallery {
@@ -72,10 +89,55 @@
     background-color: rgba(0, 0, 0, 0);
 }
 
+.MyProjects__btn_container {
+   
+    position: fixed;
+    left: 0;
+    top: calc(50% - 30px);
+    width: 80vw;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+
+
+.MyProjects__btn_container button:active {
+    background-color: rgba(255, 255, 255, 0.387);
+}
+
+
+.btn_right {
+    box-shadow:0 0 8px rgba(255, 255, 255, 0.696);
+    background-color: rgba(0, 0, 0, 0.137);
+    color: rgba(255, 255, 255, 0.637);
+    color: rgba(255, 255, 255, 0.637);
+    font-size: 4rem;
+}
+
+.btn_left {
+    box-shadow:0 0 8px rgba(255, 255, 255, 0.696);
+    background-color: rgba(0, 0, 0, 0.137);
+    color: rgba(255, 255, 255, 0.637);
+    font-size: 60px;
+    font-weight: 100;
+}
+
+button:disabled,
+button[disabled] {
+    opacity: 0;
+}
+
+
 @media only screen and (min-width: 768px) {
 
     .image-gallery {
         width: 60%;
+    }
+
+    .MyProjects img {
+        height: auto;
+        width: 600px;
     }
 
     .image-gallery.fullscreen-modal {
