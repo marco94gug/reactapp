@@ -104,7 +104,7 @@ function App() {
       </HamMenu>
       
       <main className="main_section">
-        <Hero onClick={scrollToSection} refValue={knowledge}/>
+        <Hero onClick={scrollToSection} refValue={about}/>
         <About myRef={about} knowledgeRef={knowledge}/>
         <MyProjects aboutRef={about} myRef={myProjects} />
         <Experiences myRef={experience} />
