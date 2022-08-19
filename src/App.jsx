@@ -91,7 +91,7 @@ function App() {
   }
 
   return (
-    <div onClick={(e) => appClick(e)} className="App">
+    <div onClick={(e) => appClick(e)} className="App" >
       <LoadingScreen isVisible={isVisible}/>
       <ScrollToTop scrollTop={scrollTop} />
       <Navbar>

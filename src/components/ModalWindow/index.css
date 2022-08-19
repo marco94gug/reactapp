@@ -12,7 +12,6 @@
     background-color: rgba(0, 0, 0, 0.731);
     z-index: 9999;
     backdrop-filter: blur(4px);
-    
 }
 
 .ModalWindow__window img {
@@ -21,15 +20,11 @@
     
 }
 
-.ModalWindow__window {
-    
-    
-    
+.ModalWindow__window {    
     gap: 20px;
     transform: scale(0.0);
     transition: all 0.5s;
-    z-index: 9999;
-    
+    z-index: 9999;   
 }
 
 .ModalWindow__window.active {
