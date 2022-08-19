@@ -48,6 +48,8 @@ const Swipe = () => {
 
 const handleOnTouchStart = (e) => {
     TouchStartX = e.changedTouches[0].screenX;
+    console.log("changedTouches[0]:", e.changedTouches[0])
+    console.log("changedTouches 'senza chiave 0':", e.changedTouches)
 }
 
 const handleOnTouchEnd = (e) => {
