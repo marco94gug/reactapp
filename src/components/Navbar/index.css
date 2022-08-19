@@ -4,16 +4,18 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
-    position: sticky;
+    position: fixed;
     z-index: 999;
     top: 0;
     left: 0;
     height: 40px;
     width: 100vw;
-    background-color: rgb(78, 89, 122);
+    background-color: rgba(0, 0, 0, 0.584);
     color: rgb(45, 45, 45);
+    backdrop-filter: blur(4px);
 }
 
 .Logo {
     width: 25px;
+    opacity: 60%;
 }

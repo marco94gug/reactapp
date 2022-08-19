@@ -11,6 +11,21 @@
     
 }
 
+.experiences-parallax {
+    height: 260vh;
+}
+
+.experiences-card {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 40px;
+    background-color: rgba(255, 255, 255, 0.500); 
+    backdrop-filter: blur(2px);
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.375);
+    padding: 40px;
+}
+
 .Experiences__all {
     display: flex;
     flex-direction: column;
@@ -18,6 +33,7 @@
     /* opacity: 0; */
     transition: all 0.8s;
     opacity: 0;
+    
     /* transform: translateY(80px); */
    
 }
@@ -66,7 +82,8 @@
 
 .Experiences__title,
 .Experiences__content h2 {
-    color: rgb(78, 89, 122);
+    color: rgba(0, 0, 0, 0.664);
+    text-shadow: 0 0 4px rgba(255, 255, 255, 0.321);
 }
 
 .Experiences__title {
@@ -78,7 +95,7 @@
 }
 
 .experiences__date {
-    color: rgb(144, 151, 171); 
+    color: rgba(0, 0, 0, 0.399);  
     font-size: 0.8rem;
     font-weight: 200;
 }
@@ -86,7 +103,7 @@
 .experiences__paragraph_3,
 .experiences__paragraph_2,
 .experiences__paragraph_1 {
-    color: rgb(144, 151, 171); 
+    color: rgba(0, 0, 0, 0.399);  
     margin: 10px 0;
 }
 
@@ -96,8 +113,8 @@
         margin-top: 0;
     }
 
-    .Experiences__title {
-        transform: translateY(-50px);
+    .experiences-parallax {
+        height: 100vh;
     }
 
     .Experiences__all {

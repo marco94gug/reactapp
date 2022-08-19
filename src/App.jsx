@@ -15,6 +15,7 @@ import MyProjects from './components/MyProjects';
 import ScrollToTop from './components/ScrollToTop';
 import About from './components/About/About';
 import LoadingScreen from './components/LoadingScreen';
+import Footer from './components/Footer';
 
 function App() {
   const about = useRef(null);
@@ -34,14 +35,14 @@ function App() {
       ref: about,
     },
     {
-      text: 'Experiences',
-      icon: <AiOutlineProject className='experiences'/>,
-      ref: experience,
-    },
-    {
       text: 'My Projects',
       icon: <MdOutlineWorkOutline className='my_projects'/>,
       ref: myProjects,
+    },
+    {
+      text: 'Experiences',
+      icon: <AiOutlineProject className='experiences'/>,
+      ref: experience,
     },
     {
       text: 'Contact',
@@ -55,14 +56,14 @@ function App() {
 
   const scrollToSection = (elementRef) => {
     window.scrollTo({
-      top: elementRef.current.offsetTop - 40,
+      top: elementRef.current.offsetTop + 1,
       behavior: 'smooth',
     })
   };
 
   const scrollTop = () => {
     window.scrollTo({
-      top: -40,
+      top: 0,
       behavior: 'smooth',
     })
   }
@@ -92,9 +93,6 @@ function App() {
   return (
     <div onClick={(e) => appClick(e)} className="App">
       <LoadingScreen isVisible={isVisible}/>
-      {!isVisible &&
-      (
-        <>
       <ScrollToTop scrollTop={scrollTop} />
       <Navbar>
         <img onClick={scrollTop} className="Logo" src={Logo} alt="logo"/>
@@ -115,13 +113,11 @@ function App() {
           <h2>Interested in collaborating with me?</h2>
           <p>My inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!</p>
           <a href="mailto:marco.guglielmino94@gmail.com">
-          <Button btnText="Say Hello!" className="return-btn"/>
+          <Button btnText="Say Hello!" className="return-btn-black"/>
           </a>
         </SlideModal> 
-        </main>
-        </>
-        )
-}
+      </main>
+        <Footer />
     </div>
   );
 }

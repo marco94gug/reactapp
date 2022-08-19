@@ -4,6 +4,7 @@ import ModalWindow from '../ModalWindow/ModalWindow'
 import Button from '../Button'
 import {images} from '../../constants'
 import { FaAngleRight, FaAngleLeft} from 'react-icons/fa';
+import { ParallaxBanner, ParallaxBannerLayer } from 'react-scroll-parallax';
 
 
 const MyProjects = ({myRef, aboutRef}) => {
@@ -13,20 +14,17 @@ const [index, setIndex] = useState("");
 
 useEffect(() => {
     window.addEventListener('scroll', () => {
-        
         const AboutBottomCord = aboutRef.current.offsetTop + (aboutRef.current.offsetHeight / 2) -180
-
+      
         if ((window.scrollY > AboutBottomCord - 600)) {
             scrollingImg.current.scroll({
-                left: (window.scrollY - AboutBottomCord),
+                left: window.scrollY - AboutBottomCord,
               })
         }
-    }
-    )
+    })
 }, [aboutRef])
 
 const onHandleClick = (item) => {
-
     setModalVisible(true); 
     setIndex(item);
 }
@@ -39,7 +37,11 @@ const handleOnClickOverlay = (e) => {
 
 // console.log(scrollingImg.current.offsetTop)
     return (
-        <div ref={myRef} className="MyProjects">
+        <div ref={myRef}>
+        <ParallaxBanner className='myprojects-parallax'>
+            <ParallaxBannerLayer image="https://images.unsplash.com/photo-1534447677768-be436bb09401?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2094&q=80" speed={-20} />
+            <ParallaxBanner>
+        <div  className="MyProjects">
             <h2 className="MyProjects-title">My Recent Work</h2>
             
             <div ref={scrollingImg} className="img_container">
@@ -55,6 +57,9 @@ const handleOnClickOverlay = (e) => {
                 </ModalWindow>}
             {/* <ImageGallery items={images} showFullscreenButton={true} useBrowserFullscreen={false} showPlayButton={false} autoPlay={false} /> */}
             <p>Here are some of the selected project I have been working on!</p>
+        </div>
+        </ParallaxBanner>
+        </ParallaxBanner>
         </div>
     )
 }

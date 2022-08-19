@@ -5,9 +5,9 @@
     right: 20px;
     width: 70px;
     height: 70px;
-    background-color: white;
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.05);
-    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.459);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.495);
+    /* border-radius: 8px; */
     display: flex;
     z-index: 999;
     justify-content: center;
@@ -21,8 +21,8 @@
     position: absolute;
     width: 40px;
     height: 6px;
-    background-color: rgb(78, 89, 122);
-    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.399);
+    
     transition: all 0.35s;
 }
 
@@ -56,20 +56,25 @@
 
 .HamMenu {
     position: fixed;
-    top: -100vh;
+    top: 40px;
     right: 0;
-    background-color: ghostwhite;
+    height: 0;
+    background-color: rgba(0, 0, 0, 0.665);
     padding: 0;
-    /* width: 60%;
-    height: 80%; */
+    color: white;
     z-index: 6;
-    transition: all 0.35s;
+    transition: all .35s;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.174);
+    opacity: 0;
+    pointer-events: none;
 }
 
 .HamMenu.active {
     top: 40px;
     right: 0;
+    height: 164px;
+    pointer-events: all;
+    opacity: 1;
 }
 
 .menu-list {
@@ -82,7 +87,7 @@
 
 .menu-list li {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     width: 100%;
     gap: 20px;
     list-style: none;
@@ -117,6 +122,8 @@
         height: 40px;
         align-items: center;
         margin-right: 20px;
+        opacity: 1;
+        pointer-events: all;
     }
 
     .menu-list {

@@ -1,16 +1,22 @@
 import './index.css'
-import { Parallax } from 'react-scroll-parallax';
+import { Parallax, ParallaxBanner, ParallaxBannerLayer } from 'react-scroll-parallax';
 
 import Avatar from '../../assets/avatar.png';
 
 export default function About({myRef, knowledgeRef}) {
 
     return (
-    <div ref={myRef} className="About">
+        <div ref={myRef} style={{width: '100%'}}>
+        <ParallaxBanner className="parallax-banner">
+            <ParallaxBannerLayer   image="https://images.unsplash.com/photo-1459213599465-03ab6a4d5931?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1776&q=80" speed={-20} />
+            <ParallaxBannerLayer>
+    <div  className="About">
+        <div className="About_card">
         <div className="About__container">
+        
             <h2  className='About__title'>About me:</h2>
             
-            <div className="About__main_content">
+            <div  className="About__main_content">
                 <div className="About__main_content_text">
                     <p>Hello! My name is Marco and I enjoy creating things that live on the internet. My interest in web development started from childhood, when I decided to try editing custom Tumblr themes.</p>
                     <p>
@@ -32,8 +38,9 @@ export default function About({myRef, knowledgeRef}) {
                     </Parallax>
                     </div> 
             </div>
-            
+           
         </div>
+        
         <div ref={knowledgeRef} className="About__knowledge">
             <p className="title__knowledge">Here are a few technologies and skills I've been working recently:</p>
             <ul className="About__knowledge_list">
@@ -47,8 +54,10 @@ export default function About({myRef, knowledgeRef}) {
                 <li>React.Js</li>
             </ul>
         </div>
-        
+        </div>
     </div>
-
+    </ParallaxBannerLayer>
+        </ParallaxBanner>
+        </div>
     )
 }

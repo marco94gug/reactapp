@@ -3,7 +3,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #4e597a;
+    background-color: rgba(0, 0, 0, 0.832);
+    backdrop-filter: blur(10px);
     width: 100vw;
     height: 100vh;
     z-index: 9999;

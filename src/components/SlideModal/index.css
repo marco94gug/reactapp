@@ -10,15 +10,16 @@
     justify-content: center;
     gap: 40px;
     align-items: center;
-    background-color: ghostwhite;
+    background-color: rgba(0, 0, 0, 0.806);
+    backdrop-filter: blur(8px);
     transition: all 0.45s;
     text-align: center;
     z-index: 5;
-    color: rgb(144, 151, 171);
+    color: rgba(255, 255, 255, 0.743);
 }
 
 .SlideModal h2 {
-    color: rgb(78, 89, 122);
+    color: rgba(255, 255, 255, 0.809);
 }
 
 .SlideModal.active {

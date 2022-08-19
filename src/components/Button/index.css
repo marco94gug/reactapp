@@ -22,21 +22,39 @@
 
 .return-btn {
     padding: 20px;
-    border: 2px solid rgb(78, 89, 122);
+    border: 2px solid rgba(0, 0, 0, 0.565);
     border-radius: 6px;
     background: none;
-    color: rgb(78, 89, 122);
+    color: rgba(0, 0, 0, 0.565);
     font-weight: bold;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.319);
     cursor: pointer;
 }
 
-.return-btn:active {
+.return-btn-black {
+    padding: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.662);
+    border-radius: 6px;
+    background: none;
+    color: rgba(253, 253, 253, 0.662);
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.071);
+    cursor: pointer;
+    transition: all .35s;
+}
+
+.return-btn-black:hover {
+    background-color: rgba(255, 255, 255, 0.252);
+}
+
+.return-btn:active,
+.return-btn-black:active {
     transform: scale(0.958);
 }
 
 .return-btn:hover {
-    background-color: rgb(237, 244, 255);
+    background-color: rgba(0, 0, 0, 0.117);
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.576);
     transition-delay: 0;
     transition: background-color 0.30s;
 
@@ -47,10 +65,10 @@
     width: 40px;
     
     padding: 5px;
-    border: 2px solid rgb(78, 89, 122);
+    border: 2px solid rgba(255, 255, 255, 0.723);
     border-radius: 100%;
-    background-color: white;
-    color: rgb(78, 89, 122);
+    background: none;
+    color: rgba(255, 255, 255, 0.723);
     font-weight: bold;
     font-size: 1.2rem;
     transition: all 0.20s;
