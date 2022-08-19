@@ -92,12 +92,17 @@
 
 @media only screen and (min-width: 768px) {
     .Experiences {
+        
         height: calc(100vh - 40px);
         margin-top: 0;
+        
     }
 
     .experiences-parallax {
         height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .Experiences__all {
@@ -106,6 +111,7 @@
 
     .Experiences__content {
         width: 33%;
+        
     }
 
     .Experiences__all div:nth-child(1) {
