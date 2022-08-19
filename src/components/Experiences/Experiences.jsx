@@ -1,6 +1,6 @@
 import './index.css';
 import {useEffect, useState} from 'react';
-import { ParallaxBanner, ParallaxBannerLayer } from 'react-scroll-parallax';
+import { ParallaxBanner } from 'react-scroll-parallax';
 
 const Experiences = ({myRef}) => {
 
@@ -19,11 +19,16 @@ const Experiences = ({myRef}) => {
     },[myRef])
 
     return (
-        <div ref={myRef} className="experiences-container">
-        <ParallaxBanner className='experiences-parallax'>
-                <ParallaxBannerLayer image="https://images.unsplash.com/photo-1508163223045-1880bc36e222?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80" speed={-60} />
-                <ParallaxBanner>
-        <div className="Experiences">
+        <div ref={myRef} className="Experiences">
+            <ParallaxBanner className='experiences-parallax'
+                layers={[
+                    {
+                        image: "https://images.unsplash.com/photo-1508163223045-1880bc36e222?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80",
+                        speed: -60,
+                    }
+                ]}
+            >
+        
             <div className="experiences-card">
             <div className="Experiences__title">
                 <h2>Where I've Worked</h2>
@@ -73,10 +78,9 @@ const Experiences = ({myRef}) => {
                 </div>
             </div>
             </div>
-        </div>
-        </ParallaxBanner>
+        
             </ParallaxBanner>
-            </div>
+        </div>
     )
 };
 

@@ -1,18 +1,10 @@
 .Experiences {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    
-    /* height: 100vh; */
-    align-items: center;
-    padding: 50px 40px;
-    gap: 20px;
     transition: all 1.0s;
-    
 }
 
 .experiences-parallax {
-    height: 260vh;
+    height: 100%;
+    padding: 50px 40px;
 }
 
 .experiences-card {
@@ -30,12 +22,8 @@
     display: flex;
     flex-direction: column;
     gap:30px;
-    /* opacity: 0; */
     transition: all 0.8s;
-    opacity: 0;
-    
-    /* transform: translateY(80px); */
-   
+    opacity: 0;  
 }
 
 .Experiences__all.active {
@@ -76,10 +64,6 @@
     transform: translateX(0);
 }
 
-/* .Experiences__content {
-    margin: 20px 0;
-} */
-
 .Experiences__title,
 .Experiences__content h2 {
     color: rgba(0, 0, 0, 0.664);
@@ -87,7 +71,6 @@
 }
 
 .Experiences__title {
-
     padding: 4px 0;
    text-align: center;
    font-size: 0.8rem;
@@ -109,53 +92,53 @@
 
 @media only screen and (min-width: 768px) {
     .Experiences {
-        height: 100vh;
+        height: 100%;
         margin-top: 0;
     }
 
     .experiences-parallax {
-        height: 100vh;
+        height: 100%;
     }
 
     .Experiences__all {
     flex-direction: row;
-}
+    }
 
-.Experiences__content {
-    width: 33%;
-}
+    .Experiences__content {
+        width: 33%;
+    }
 
-.Experiences__all div:nth-child(1) {
-    transition: all 1s;
-    transform: translateY(100px);
-}
+    .Experiences__all div:nth-child(1) {
+        transition: all 1s;
+        transform: translateY(100px);
+    }
 
-.Experiences__all.active div:nth-child(1) {
-    transform: translateY(0);
-}
+    .Experiences__all.active div:nth-child(1) {
+        transform: translateY(0);
+    }
 
-.Experiences__all div:nth-child(2) {
-    transition: all 1s;
-    transition-delay: .5s;
-    opacity: 0;
-    transform: translateY(100px);
-}
+    .Experiences__all div:nth-child(2) {
+        transition: all 1s;
+        transition-delay: .5s;
+        opacity: 0;
+        transform: translateY(100px);
+    }
 
-.Experiences__all.active div:nth-child(2) {
-    opacity: 1;
-    transform: translateY(0);
-}
+    .Experiences__all.active div:nth-child(2) {
+        opacity: 1;
+        transform: translateY(0);
+    }
 
-.Experiences__all div:nth-child(3) {
-    transition: all 1s;
-    transition-delay: 1s;
-    opacity: 0;
-    transform: translateY(100px);
-}
+    .Experiences__all div:nth-child(3) {
+        transition: all 1s;
+        transition-delay: 1s;
+        opacity: 0;
+        transform: translateY(100px);
+    }
 
-.Experiences__all.active div:nth-child(3) {
-    opacity: 1;
-    transform: translateY(0);
-}
+    .Experiences__all.active div:nth-child(3) {
+        opacity: 1;
+        transform: translateY(0);
+    }
 
 }

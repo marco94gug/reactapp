@@ -1,16 +1,22 @@
 import './index.css'
-import { Parallax, ParallaxBanner, ParallaxBannerLayer } from 'react-scroll-parallax';
+import { Parallax, ParallaxBanner} from 'react-scroll-parallax';
 
 import Avatar from '../../assets/avatar.png';
 
 export default function About({myRef, knowledgeRef}) {
 
     return (
-        <div ref={myRef} style={{width: '100%'}}>
-        <ParallaxBanner className="parallax-banner">
-            <ParallaxBannerLayer   image="https://images.unsplash.com/photo-1459213599465-03ab6a4d5931?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1776&q=80" speed={-20} />
-            <ParallaxBannerLayer>
-    <div  className="About">
+        // <div ref={myRef} style={{width: '100%'}}>
+        <div ref={myRef} className="About">
+        <ParallaxBanner className="parallax-banner"
+        layers={[
+            {
+                image: "https://images.unsplash.com/photo-1459213599465-03ab6a4d5931?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1776&q=80",
+                speed: -20,
+            }
+]}
+        >
+   
         <div className="About_card">
         <div className="About__container">
         
@@ -55,9 +61,10 @@ export default function About({myRef, knowledgeRef}) {
             </ul>
         </div>
         </div>
-    </div>
-    </ParallaxBannerLayer>
+   
+
         </ParallaxBanner>
         </div>
+        // </div>
     )
 }

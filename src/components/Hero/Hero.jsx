@@ -1,7 +1,7 @@
 import './index.css'
 import Button from '../Button'
 import {useEffect, useState} from 'react';
-import { ParallaxBanner, ParallaxBannerLayer } from 'react-scroll-parallax';
+import { ParallaxBanner} from 'react-scroll-parallax';
 
 export default function Hero({myRef, onClick, refValue}) {
 const [value, setValue] = useState('');
@@ -16,10 +16,14 @@ const [value, setValue] = useState('');
     
    
     return (
-        <ParallaxBanner className="parallax-hero">
-        <ParallaxBannerLayer image="https://images.unsplash.com/photo-1511884642898-4c92249e20b6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" speed={-40} />
-        <ParallaxBannerLayer>
         <div ref={myRef} className="Hero">
+        <ParallaxBanner className="parallax-hero"
+        layers={[
+            {
+                image: "https://images.unsplash.com/photo-1511884642898-4c92249e20b6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+                speed: -40,
+            }]}
+        >
             <div className='hero-container'>
             <p className={`presentation-text ${value}`}>Hi, my name is</p>
             <h1 className={`title ${value}`}>Marco Guglielmino.</h1>
@@ -33,9 +37,10 @@ const [value, setValue] = useState('');
             </div>  
             </div>
                
-        </div>
-        </ParallaxBannerLayer>
+        
+        {/* </ParallaxBannerLayer> */}
         </ParallaxBanner>
+        </div>
     )
 }
 

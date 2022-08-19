@@ -1,15 +1,19 @@
 .Hero {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center; */
     height: 100vh;
-    padding: 20px;
-    gap: 10px;
+    /* padding: 20px;
+    gap: 10px; */
 }
 
 .parallax-hero {
-    height: 100vh;
-    
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .hero-container {
@@ -101,9 +105,9 @@
 }
 
 @media only screen and (min-width: 768px) {
-    .Hero {
+
+    .parallax-hero {
         padding: 80px 20% 80px 80px;
-        
     }
 
     .hero-container {
