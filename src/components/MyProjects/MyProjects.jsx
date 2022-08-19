@@ -3,7 +3,7 @@ import {useEffect, useRef, useState} from 'react';
 import ModalWindow from '../ModalWindow/ModalWindow'
 import Button from '../Button'
 import {images} from '../../constants'
-import { FaAngleRight, FaAngleLeft} from 'react-icons/fa';
+import { IoMdArrowDroprightCircle, IoMdArrowDropleftCircle} from 'react-icons/io';
 import { ParallaxBanner } from 'react-scroll-parallax';
 
 const MyProjects = ({myRef, aboutRef}) => {
@@ -83,8 +83,8 @@ const handleOnTouchEnd = (e) => {
             {isModalVisible && <ModalWindow onTouchStart={(e) => handleOnTouchStart(e)} onTouchEnd={(e) => handleOnTouchEnd(e)} onClick={(e) => handleOnClickOverlay(e)} >
                     <img src={images[index].original} alt="img" />
                     <div className='MyProjects__btn_container'>
-                    <Button disabled={Number(index) === 0} onClick={() => setIndex( prev => Number(prev) - 1)} btnText={<FaAngleLeft className="btn_left"/>} className="arrow" />
-                    <Button disabled={Number(index) === images.length -1} onClick={() => setIndex( prev => Number(prev) + 1)} btnText={<FaAngleRight className="btn_right"/>} className="arrow" />
+                    <Button disabled={Number(index) === 0} onClick={() => setIndex( prev => Number(prev) - 1)} btnText={<IoMdArrowDropleftCircle className="btn_left"/>} className="arrow" />
+                    <Button disabled={Number(index) === images.length -1} onClick={() => setIndex( prev => Number(prev) + 1)} btnText={<IoMdArrowDroprightCircle className="btn_right"/>} className="arrow" />
                     </div>
                     </ModalWindow>}
         </div>
