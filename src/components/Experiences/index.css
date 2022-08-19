@@ -92,7 +92,7 @@
 
 @media only screen and (min-width: 768px) {
     .Experiences {
-        height: 100%;
+        height: calc(100vh - 40px);
         margin-top: 0;
     }
 
