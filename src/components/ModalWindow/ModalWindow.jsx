@@ -1,7 +1,7 @@
 import './index.css';
 import { useEffect, useState } from 'react';
 
-const ModalWindow = ({children, onClick}) => {
+const ModalWindow = ({children, onClick, onTouchStart, onTouchEnd}) => {
     const [windowVisible, setWindowVisible] = useState(false)
 
      useEffect(() => {
@@ -11,7 +11,7 @@ const ModalWindow = ({children, onClick}) => {
     return (
         <>
         <div onClick={onClick}  className="ModalWindow__overlay">
-            <div className={!windowVisible ? "ModalWindow__window" : "ModalWindow__window active"}  >
+            <div onTouchStart={onTouchStart} onTouchEnd={onTouchEnd} className={!windowVisible ? "ModalWindow__window" : "ModalWindow__window active"}  >
                 {children}
             </div>
         </div>

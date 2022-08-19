@@ -24,6 +24,9 @@ useEffect(() => {
     })
 }, [aboutRef])
 
+let TouchStartX = 0;
+let TouchEndX = 0;
+
 const onHandleClick = (item) => {
     setModalVisible(true); 
     setIndex(item);
@@ -33,6 +36,23 @@ const handleOnClickOverlay = (e) => {
     if (e.target.tagName !== 'svg' && e.target.tagName !== 'IMG' && e.target.tagName !== 'path' && e.target.className !== 'MyProjects__btn_container') {
     setModalVisible(false);
     }
+}
+
+const Swipe = () => {
+    if (TouchStartX > TouchEndX && index < images.length -1 ) {
+        setIndex(prev => Number(prev) + 1);
+    }
+    if (TouchStartX < TouchEndX && index > 0 )
+    setIndex( prev => Number(prev) - 1)
+}
+
+const handleOnTouchStart = (e) => {
+    TouchStartX = e.changedTouches[0].screenX;
+}
+
+const handleOnTouchEnd = (e) => {
+    TouchEndX = e.changedTouches[0].screenX;
+    Swipe();
 }
 
 // console.log(scrollingImg.current.offsetTop)
@@ -59,7 +79,7 @@ const handleOnClickOverlay = (e) => {
         
             </div>
         </ParallaxBanner>
-        {isModalVisible && <ModalWindow onClick={(e) => handleOnClickOverlay(e)} >
+        {isModalVisible && <ModalWindow onTouchStart={(e) => handleOnTouchStart(e)} onTouchEnd={(e) => handleOnTouchEnd(e)} onClick={(e) => handleOnClickOverlay(e)} >
                 <img src={images[index].original} alt="img" />
                 <div className='MyProjects__btn_container'>
                 <Button disabled={Number(index) === 0} onClick={() => setIndex( prev => Number(prev) - 1)} btnText={<FaAngleLeft className="btn_left"/>} className="arrow" />

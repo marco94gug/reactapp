@@ -39,6 +39,10 @@
     
 }
 
+.img-full {
+    width: 200px;
+}
+
 .img_container {
     display: flex;
     gap: 10px;
