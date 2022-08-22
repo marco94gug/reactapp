@@ -6,12 +6,11 @@
 
 .main_section {
     min-height: calc(100vh - 40px);
-    width: 100vw;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* gap:40px; */
     overflow-x: hidden;
 }
 

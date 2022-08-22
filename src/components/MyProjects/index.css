@@ -7,14 +7,14 @@
     align-items: center;
     padding: 20px;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     text-align: center;
 }
 
 .bkg-container {
     position: absolute;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     overflow: hidden;
 }
 

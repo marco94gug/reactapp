@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "./static/css/main.104010f4.css",
+    "main.css": "./static/css/main.7450895c.css",
     "main.js": "./static/js/main.d461df8a.js",
     "static/media/avatar.png": "./static/media/avatar.e9c7129d80846ba20a76.png",
     "static/media/crypto_one.jpg": "./static/media/crypto_one.a3bb0836f472ef9a1d63.jpg",
@@ -12,11 +12,11 @@
     "static/media/social_two.jpg": "./static/media/social_two.10e9848ae42c2fa64f1c.jpg",
     "static/media/social_one.jpg": "./static/media/social_one.57394b870d2bd7159ab5.jpg",
     "index.html": "./index.html",
-    "main.104010f4.css.map": "./static/css/main.104010f4.css.map",
+    "main.7450895c.css.map": "./static/css/main.7450895c.css.map",
     "main.d461df8a.js.map": "./static/js/main.d461df8a.js.map"
   },
   "entrypoints": [
-    "static/css/main.104010f4.css",
+    "static/css/main.7450895c.css",
     "static/js/main.d461df8a.js"
   ]
 }
