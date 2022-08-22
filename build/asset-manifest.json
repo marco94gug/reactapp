@@ -1,21 +1,22 @@
 {
   "files": {
-    "main.css": "./static/css/main.0a161dbc.css",
-    "main.js": "./static/js/main.e2a6a6b8.js",
+    "main.css": "./static/css/main.104010f4.css",
+    "main.js": "./static/js/main.d461df8a.js",
     "static/media/avatar.png": "./static/media/avatar.e9c7129d80846ba20a76.png",
     "static/media/crypto_one.jpg": "./static/media/crypto_one.a3bb0836f472ef9a1d63.jpg",
     "static/media/cloudlanding_one.jpg": "./static/media/cloudlanding_one.df17c07f3a35b0068f01.jpg",
     "static/media/gallerylanding_two.jpg": "./static/media/gallerylanding_two.88669e72f00c89d6ad6c.jpg",
     "static/media/gallerylanding_one.jpg": "./static/media/gallerylanding_one.7077d23a47a1936e77ab.jpg",
     "static/media/ecommerce_one.jpg": "./static/media/ecommerce_one.333efb5ccbd082650fa8.jpg",
+    "static/media/background-section.jpg": "./static/media/background-section.a35f5a0f0956df222de0.jpg",
     "static/media/social_two.jpg": "./static/media/social_two.10e9848ae42c2fa64f1c.jpg",
     "static/media/social_one.jpg": "./static/media/social_one.57394b870d2bd7159ab5.jpg",
     "index.html": "./index.html",
-    "main.0a161dbc.css.map": "./static/css/main.0a161dbc.css.map",
-    "main.e2a6a6b8.js.map": "./static/js/main.e2a6a6b8.js.map"
+    "main.104010f4.css.map": "./static/css/main.104010f4.css.map",
+    "main.d461df8a.js.map": "./static/js/main.d461df8a.js.map"
   },
   "entrypoints": [
-    "static/css/main.0a161dbc.css",
-    "static/js/main.e2a6a6b8.js"
+    "static/css/main.104010f4.css",
+    "static/js/main.d461df8a.js"
   ]
 }

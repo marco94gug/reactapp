@@ -1,6 +1,7 @@
 import './index.css';
-import {useEffect, useState, useRef} from 'react';
+import {useEffect, useState} from 'react';
 import { ParallaxBanner } from 'react-scroll-parallax';
+import ExperienceCard from '../ExperienceCard';
 
 const Experiences = ({myRef}) => {
     const [id, setId] = useState("deck");
@@ -23,6 +24,9 @@ const Experiences = ({myRef}) => {
         if (e.target.tagName !== 'LI') {
             setId(e.target.parentNode.id)
         }
+
+       
+
     }
 
     return (
@@ -49,8 +53,9 @@ const Experiences = ({myRef}) => {
                         <li className={id === "music" ? "exp-li active" : "exp-li"} onClick={(e) => handeOnClickLi(e)} id="music"><p>Sound</p> </li>
                     </ul>
                 <div className={!isActive ? "Experiences__all" : "Experiences__all active"}>
-                    {id === "deck" && <div className="Experiences__content"  >
-                        <h2>Deck Officier</h2>
+                   {id === "deck" && <ExperienceCard>
+                    <div className="Experiences__content" >
+                        <h2 className='Main_exp_title'>Deck Officier <span className='place'>@Corsica Ferries</span></h2>
                         <p className="experiences__date">
                             May 2021 - May 2022
                         </p>
@@ -63,8 +68,10 @@ const Experiences = ({myRef}) => {
                         <p className="experiences__paragraph_3">
                         In this work experience I had the opportunity to be the leader of a team by teaching the trade and assigning tasks to a group of interns; I also learned to relate directly with the port authorities, becoming more confident and responsible about my work.
                         </p>
-                    </div>}
-                {id === "photography" && <div className="Experiences__content" >
+                    </div>
+                    </ExperienceCard> }
+                    {id === "photography" && <ExperienceCard>
+                    <div className="Experiences__content" >
                         <h2>Photographer and Videomaker</h2>
                         <p className="experiences__date">
                             September 2017 - May 2021
@@ -75,8 +82,8 @@ const Experiences = ({myRef}) => {
                         <p className="experiences__paragraph_2">
                         I improved my creativity through the use of physical and digital tools such as Adobe Photoshop, Adobe Illustrator and Adobe Indesign, keeping up with time.
                         </p>
-                    </div>}
-                    {id === "music" && <div className="Experiences__content"  >
+                    </div></ExperienceCard>}
+                    {id === "music" && <ExperienceCard> <div className="Experiences__content"  >
                         <h2>Sound Technician</h2>
                         <p className="experiences__date">
                         October 2013 - April 2015
@@ -90,7 +97,8 @@ const Experiences = ({myRef}) => {
                         <p className="experiences__paragraph_3">
                         Learned how to properly organize the equiptment and being a dependable self-motivated.  
                         </p>
-                    </div>}
+                    </div></ExperienceCard>}
+               
                 </div>
             </div>
             </div>

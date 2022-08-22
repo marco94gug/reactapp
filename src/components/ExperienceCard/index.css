@@ -1,0 +1,8 @@
+.ExperienceCard {
+    opacity: 0;
+    transition: opacity .15s;
+}
+
+.ExperienceCard.active {
+    opacity: 1;
+}

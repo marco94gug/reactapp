@@ -63,36 +63,12 @@
     transform: translateX(0px);
 }
 
-.Experiences__all div:nth-child(1) {
+.Experiences__all div {
     transition: all 1s;
     transform: translateX(100px);
 }
 
-.Experiences__all.active div:nth-child(1) {
-    transform: translateX(0);
-}
-
-.Experiences__all div:nth-child(2) {
-    transition: all 1s;
-    transition-delay: .5s;
-    opacity: 0;
-    transform: translateX(100px);
-}
-
-.Experiences__all.active div:nth-child(2) {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-.Experiences__all div:nth-child(3) {
-    transition: all 1s;
-    transition-delay: 1s;
-    opacity: 0;
-    transform: translateX(100px);
-}
-
-.Experiences__all.active div:nth-child(3) {
-    opacity: 1;
+.Experiences__all.active div {
     transform: translateX(0);
 }
 
@@ -106,7 +82,19 @@
     padding: 4px 0;
    text-align: center;
    font-size: 0.8rem;
-   z-index: 1;
+   z-index: 1;   
+}
+
+.Main_exp_title {
+    display: flex;
+    justify-content: flex-start;
+    gap: 5px;
+    align-items: center;
+}
+
+.place {
+    font-size: 1.2rem;
+    color: rgba(162, 90, 90, 0.579);
 }
 
 .experiences__date {
@@ -139,7 +127,8 @@
 
     .experiences-list {
         flex-direction: column;
-        width: 20%;
+        max-width: 16%;
+        min-height: 50vh;
     }
 
     .experiences-container {
@@ -166,36 +155,12 @@
         
     }
 
-    .Experiences__all div:nth-child(1) {
+    .Experiences__all div {
         transition: all 1s;
         transform: translateY(100px);
     }
 
-    .Experiences__all.active div:nth-child(1) {
-        transform: translateY(0);
-    }
-
-    .Experiences__all div:nth-child(2) {
-        transition: all 1s;
-        transition-delay: .5s;
-        opacity: 0;
-        transform: translateY(100px);
-    }
-
-    .Experiences__all.active div:nth-child(2) {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-    .Experiences__all div:nth-child(3) {
-        transition: all 1s;
-        transition-delay: 1s;
-        opacity: 0;
-        transform: translateY(100px);
-    }
-
-    .Experiences__all.active div:nth-child(3) {
-        opacity: 1;
+    .Experiences__all.active div {
         transform: translateY(0);
     }
 
